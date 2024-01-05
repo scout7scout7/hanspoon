@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* 800이하 */
+@media screen and (max-width: 980px) {
+    header {
+        height: 80px;
+        border-width: 2px;
+        z-index: 10;
+    }
+    header .btn_mobile {
+        display: block;
+        position: absolute;
+        top: 25px; right: 20px;
+        font-size: 26px;
+        font-weight: 500;
+        color: #000;
+    }
+    header h1 {margin-left: 20px;}
+    header h1 > a {
+        width: auto;
+        height: 80px;
+        line-height: 80px;
+    }
+    /* gnb */
+    header .gnb_area {
+        position: absolute;
+        top: 82px; left: 0; 
+        width: 100%;
+        height: calc(100vh - 80px); /* 전체 100vh에서 header의 높이를 뺀 값이 높이로 할당 */
+        background: #ffffff;
+        z-index: 5; /* z-index는 반드시 position이 선언되어있어야함. */
+        display: none;
+    }
+    header .gnb_area > .gnb {
+        overflow: hidden;
+        width: 50vw;
+        margin: 50px auto;
+    }
+    header .gnb_area > .gnb > li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    header .gnb_area > .gnb > li > a {
+        height: 70px;
+        line-height: 70px;
+        text-align: center;      
+        border-bottom: 1px dotted #cdcdcd;
+    }
+    /* figure */
+    figure {margin-bottom: 40px;}
+
+    /* container */
+    .container {padding: 0 2%; box-sizing: border-box;}
+    .container .inner {margin-bottom: 40px;}
+    .container h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .inner.cont_area .cont-1,
+    .inner.cont_area .cont-2,
+    .inner.cont_area aside {
+        float: none; 
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .inner.cont_area .cont-2 {margin-left: 0;}
+    .inner.cont_area aside {padding: 15px;}
+
+    .inner.cont_area2 {margin-top: 40px;}
+    .inner.inner.cont_area2 .cont-3,
+    .inner.cont_area2 aside {
+        float: none;
+        width: 100%;
+    }
+    .inner.inner.cont_area2 .cont-3 {
+        
+        margin-bottom: 25px;
+    }
+    .inner.cont_area2 aside {
+        background: #f6edde;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .inner.cont_area2 aside img {
+        width: 20%;
+    }
+    .inner.cont_area2 aside p {
+        width: 76%;
+        color: inherit;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    figure {height: 30vh;}
+    .inner.cont_area2 aside img {
+        float: none;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .inner.cont_area2 aside p {
+        float: none;
+        width: 100%;
+    }
+    
+}
